@@ -8,8 +8,7 @@ using SimpleJSON;
 public class WebSocketController : ControllerBase
 {
     private readonly ILogger _logger;
-    private readonly ChatController _chatController;
-
+    
     /// <summary>
     /// UserId，WebSocket相对应的WebSocket连接列表
     /// </summary>
@@ -69,10 +68,9 @@ public class WebSocketController : ControllerBase
         }
     }
 
-    public WebSocketController(ILogger<WebSocketController> logger, ChatController chat)
+    public WebSocketController(ILogger<WebSocketController> logger)
     {
         _logger = logger;
-        _chatController = chat;
 
         // Register protocol callback here.
     }
